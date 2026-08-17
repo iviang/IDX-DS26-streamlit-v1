@@ -179,13 +179,13 @@ with st.form("prediction_form"):
         living_area = st.number_input(
             "Living area (sq ft)",
             min_value=1.0,
-            value=1800.0,
+            value=1409.0,
             step=50.0,
         )
         lot_size_acres = st.number_input(
             "Lot size (acres)",
             min_value=0.0001,
-            value=0.15,
+            value=0.138,
             step=0.01,
             format="%.4f",
         )
@@ -205,7 +205,7 @@ with st.form("prediction_form"):
             "Year built",
             min_value=1800,
             max_value=2100,
-            value=1990,
+            value=1968,
             step=1,
         )
 
@@ -230,12 +230,12 @@ with st.form("prediction_form"):
         )
         latitude = st.number_input(
             "Latitude",
-            value=34.0522,
+            value=37.23462,
             format="%.6f",
         )
         longitude = st.number_input(
             "Longitude",
-            value=-118.2437,
+            value=-121.83240,
             format="%.6f",
         )
 
@@ -243,18 +243,18 @@ with st.form("prediction_form"):
         county = st.selectbox(
             "County",
             county_options,
-            index=county_options.index("Los Angeles"),
+            index=county_options.index("Santa Clara"),
         )
         postal_code = st.text_input(
             "ZIP code",
-            value="90001",
+            value="95123",
             max_chars=10,
         )
         city = st.selectbox(
             "City",
             city_options,
-            index=city_options.index("Los Angeles")
-            if "Los Angeles" in city_options
+            index=city_options.index("San Jose")
+            if "San Jose" in city_options
             else 0,
         )
 
